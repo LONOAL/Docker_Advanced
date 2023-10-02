@@ -41,4 +41,11 @@ Utilizaremos Bind Mount para montar el directorio 'htdocs' del contenedor en un 
 docker run --name dam_web1 -di -p 8000:80 -v $PWD/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
+## Paso 5: Crear un archivo 'index.html'
+
+Crea un archivo 'index.html' en el directorio local que has vinculado en el paso anterior (por ejemplo, en 'htdocs'). Puedes usar Visual Studio Code u otro editor de texto.
+
+## Paso 6: Comprobar la página 'Hola Mundo'
+
+Abre tu navegador y accede a [http://localhost:8000](http://localhost:8000). Deberías ver la página "Hola Mundo" que has creado en el paso anterior.
 
