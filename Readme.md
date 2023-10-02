@@ -49,3 +49,24 @@ Crea un archivo 'index.html' en el directorio local que has vinculado en el paso
 
 Abre tu navegador y accede a [http://localhost:8000](http://localhost:8000). Deberías ver la página "Hola Mundo" que has creado en el paso anterior.
 
+## Paso 7: Crear otro contenedor 'dam_web2'
+
+Ahora, vamos a crear otro contenedor llamado 'dam_web2' utilizando el mismo volumen pero en un puerto diferente, por ejemplo, el puerto 9080.
+
+```bash
+docker run --name dam_web2 -di -p 9080:80 -v $PWD/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
+```
+
+## Paso 8: Comprobar que ambos servidores sirven la misma página
+
+Abre tu navegador y comprueba que puedes acceder a ambas páginas desde los siguientes enlaces:
+
+- [http://localhost:8000](http://localhost:8000)
+- [http://localhost:9080](http://localhost:9080)
+
+Ambos servidores deberían mostrar la misma página "Hola Mundo".
+
+## Paso 9: Realizar modificaciones en la página
+
+Haz modificaciones en el archivo 'index.html' que creaste en el paso 5. Guarda los cambios y actualiza los navegadores en los enlaces anteriores para verificar que ambos servidores siguen mostrando la misma página modificada.
+
